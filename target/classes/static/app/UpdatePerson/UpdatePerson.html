@@ -1,0 +1,95 @@
+<div id="wrapper">
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">Registra tus datos</h1>
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    </div>
+                    <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form role="form">
+                                    <div class="form-group">
+
+                                        
+                                        
+                                         <label> N&uacutemero de documento </label>
+                                        
+                                        <p class="text-warning">Dato anterior: {{person.numeroDocumento}}</p> <input type="text" ng-model="numeroDocumento">
+
+                                        <br>
+                                        
+                                        <label> Ciudad </label>
+                                        
+                                        <p class="text-warning">Dato anterior: {{person.ciudad}}</p> <input type="text" ng-model="ciudad">
+
+                                        <br>
+                                        
+                                        <label> Localidad </label>
+                                        <p class="text-warning">Dato anterior: {{person.localidad}}</p> <input type="text" ng-model="localidad">
+                                        
+                                        <br><br>
+                                        <label> Barrio </label>
+                                        <p class="text-warning">Dato anterior: {{person.barrio}}</p> <input type="text" ng-model="barrio">
+                                        
+                                        <br><br>
+                                        
+                                        <label> Edad del Padre </label>
+                                        <p class="text-warning">Dato anterior: {{person.edadPadre}}</p> <input type="number" ng-model="edadPadre">
+                                       
+                                        <br><br>
+                                        
+                                        <label> Ocupaci&oacuten del Padre </label>
+                                        <p class="text-warning">Dato anterior: {{person.ocupacionPadre}}</p> <input type="text" ng-model="ocupacionPadre">
+                                        
+                                        <br><br>
+                                        
+                                        <label> Telefono del Padre </label>
+                                        <p class="text-warning">Dato anterior: {{person.telefonoPadre}}</p> <input type="number" ng-model="telefonoPadre">
+                                        
+                                        <br><br>
+                                        <label> Edad de la Madre </label>
+                                        <p class="text-warning">Dato anterior: {{person.edadMadre}}</p> <input type="number" ng-model="edadMadre">
+                                        
+                                        <br><br>
+                                        <label> Ocupaci&oacuten de la Madre </label>
+                                        <p class="text-warning">Dato anterior: {{person.ocupacionMadre}}</p>  <input type="text" ng-model="ocupacionMadre">
+                                       
+                                        <br><br>
+                                        <label> Telefono de la Madre </label>
+                                        <p class="text-warning">Dato anterior: {{person.telefonoMadre}}</p> <input type="number" ng-model="telefonoMadre">
+                                        
+                                        <br><br>
+                                        <label> Aseguradora </label>
+                                        <p class="text-warning">Dato anterior: {{person.aseguradora}}</p> <input type="text" ng-model="aseguradora">
+                                        
+                                        <br><br>
+                                        <label> Vinculaci&oacuten </label>
+                                        <p class="text-warning">Dato anterior: {{person.vinculacion}}</p> <input type="text" ng-model="vinculacion">
+                                        
+                                        <br><br>
+                                    </div>
+                                    <button type="submit" class="btn btn-outline btn-primary" ng-click="update()">Actualizar</button>
+                                    <button class="btn btn-outline btn-primary" ng-click="back()">Atras</button>
+                                    <button type="reset" class="btn btn-outline btn-primary">Reiniciar</button>
+                                </form>
+                            </div>
+                        </div>
+                        <!-- /.row (nested) -->
+                    </div>
+                    <!-- /.panel-body -->
+                </div>
+                <!-- /.panel -->
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+    </div>
+    <!-- /#page-wrapper -->
+

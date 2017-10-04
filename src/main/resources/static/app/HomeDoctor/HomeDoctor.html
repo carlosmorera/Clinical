@@ -1,0 +1,178 @@
+<div ng-include="'/app/Templates/templateDoctor.html'"></div>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            
+          <!--  <h2 class="page-header">Consultar datos de control</h2>-->
+        </div>
+        <!-- /.col-lg-12 -->
+        
+        
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                    </div>
+                
+                 <div class="panel-body">
+                        <div class="row">
+                            <div class="col-lg-6">
+                                <form role="form">
+                                    <div class="form-group">
+                
+                                        <div ng-hide="FindID">
+                                            <label> Identificador a consultar</label>
+                                            <br><br>
+                                            <input type="number" ng-model="pId">
+                                            <br><br>
+
+                                            <button type="submit" class="btn btn-outline btn-primary" ng-click="consultar()">Consultar Datos</button>
+                                            <br><br>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                    </div> 
+                                    
+                
+                
+            </div>
+        </div>    
+        
+        
+        
+        
+
+    </div>
+
+    <div class="row" ng-show="FindID">
+        <div class="col-lg-12">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3>Perfil de {{principal.name}}</h3>
+                </div>
+                <!--
+                <div class="panel-body">
+                    
+                    <h6> <p style="font-size:25px; color:blue;">Informaci&oacuten del ni&ntildeo</p></h6>
+                    <hr color="blue" size=4>
+                    <label> N&uacutemero de Identificaci&oacuten
+                     
+                        <small> {{principal.id}} </small>
+                    </label>
+                    <br><br>
+                    
+                    
+                    <label> Nombre
+                       
+                        <small> {{principal.name}} </small>
+                    </label>
+                    <br><br>
+                    
+                     <label> Sexo
+                       
+                        <small> {{principal.sexo}} </small>
+                    </label>
+                    <br><br>
+                    
+                    
+                    <label> Lugar de Nacimiento
+                        
+                        <small> {{principal.lugarDeNacimiento}} </small>
+                    </label>
+                    <br><br>
+                    <label> Fecha de Nacimiento
+                        
+                        <small> {{principal.fechaDeNacimiento | date:'yyyy-MM-dd'}} </small>
+                    </label>
+                    <br><br>
+                    <label> N&uacutemero de Documento
+                        
+                        <small> {{principal.numeroDocumento}} </small>
+                    </label>
+                    <br><br>
+                    <label> Ciudad
+                        
+                        <small> {{principal.ciudad}} </small>
+                    </label>
+                    <br><br>
+                    <label> Localidad
+                        
+                        <small> {{principal.localidad}} </small>
+                    </label>
+                    <br><br>
+                    <label> Barrio
+                        
+                        <small> {{principal.barrio}} </small>
+                    </label>
+                    <br><br>
+                    <h6> <p style="font-size:25px; color:blue;">Informaci&oacuten del Padre</p></h6>
+                    <hr color="blue" size=4>
+                    
+                    <label> Nombre del Padre
+                        
+                        <small> {{principal.nombrePadre}} </small>
+                    </label>
+                    <br><br>
+                    <label> Edad del Padre
+                        
+                        <small> {{principal.edadPadre}} </small>
+                    </label>
+                    <br><br>
+                    <label> Ocupaci&oacuten del Padre
+                        
+                        <small> {{principal.ocupacionPadre}} </small>
+                    </label>
+                    <br><br>
+                    <label> Telefono del Padre
+                        
+                        <small> {{principal.telefonoPadre}} </small>
+                    </label>
+                    <br><br>
+                    
+                    <h6> <p style="font-size:25px; color:blue;">Informaci&oacuten de la Madre</p></h6>
+                    <hr color="blue" size=4>
+                    <label> Nombre de la Madre
+                        
+                        <small> {{principal.nombrMadre}} </small>
+                    </label>
+                    <br><br>
+                    <label> Edad de la Madre
+                       
+                        <small> {{principal.edadMadre}} </small>
+                    </label>
+                    <br><br>
+                    <label> Ocupaci&oacuten de la Madre
+                        
+                        <small> {{principal.ocupacionMadre}} </small>
+                    </label>
+                    <br><br>
+                    <label> Telefono de la Madre
+                        
+                        <small> {{principal.telefonoMadre}} </small>
+                    </label>
+                    <hr color="blue" size=4>
+                    <br><br>
+                    <label> Aseguradora
+                        
+                        <small> {{principal.aseguradora}} </small>
+                    </label>
+                    <br><br>
+                    <label> Vinculaci&oacuten
+                        
+                        <small> {{principal.vinculacion}} </small>
+                    </label>
+                    <br><br>
+                   
+                </div>
+                <!-- /.panel-body -->
+
+
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->

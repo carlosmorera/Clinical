@@ -1,0 +1,131 @@
+<div ng-include="'/app/Templates/templateDoctor.html'"></div>
+<div id="wrapper">
+    <div id="page-wrapper">
+        <div class="row">
+            <div class="col-lg-12">
+                <h2 class="page-header">Registro de un nuevo ni&ntildeo</h2>
+
+
+            </div>
+            <!-- /.col-lg-12 -->
+        </div>
+        <!-- /.row -->
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="panel panel-default">
+                </div>
+                <div class="panel-body">
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <form role="form">
+                                <div class="form-group">
+
+
+                                    <h4><p style="font-size:25px; color:blue;">Informaci&oacuten del ni&ntildeo</p></h4>
+                                    <hr color="blue" size=4>
+                                    <label> N&uacutemero de identificaci&oacuten </label>
+                                    <input type="number" ng-model="id">
+                                    <br><br>
+                                    <label> Nombre </label>
+                                    <input type="text" ng-model="name">
+                                    <br><br>
+                                    <label> Sexo </label>
+                                    <select name="sexo" id="sexoS">
+                                        <option value="1">Seleccione</option>
+                                        <option value="3">Femenino</option>
+                                        <option value="4">Masculino</option>
+                                    </select>
+                                    <br><br>
+                                    <label> Lugar de nacimiento </label>
+                                    <input type="text" ng-model="lugarDeNacimiento">
+                                    <br><br>
+                        
+                                    <label> Fecha de nacimiento </label>
+                                    <input type="date" ng-model="fechaDeNacimiento" placeholder="yyyy-MM-dd" max ="{{maxBithDate| date: 'yyyy-MM-dd'}}}">
+                                    <br><br>
+                                    <label> N&uacutemero documento </label>
+                                    <input type="number" ng-model="numeroDocumento">
+
+
+                                    <br><br>
+                                    <label> Tipo de documento </label>
+                                    <select name="Doc" id="doc">
+                                        <option value="1">Seleccione</option>
+                                        <option value="3">Registro civil</option>
+                                        <option value="3">Tarjeta de indentidad</option>
+                                        <option value="4">Pasaporte</option>
+                                    </select>
+
+                                    <br><br>
+                                    <label> Ciudad </label>
+                                    <input type="text" ng-model="ciudad">
+                                    <br><br>
+                                    <label> Localidad </label>
+                                    <input type="text" ng-model="localidad">
+                                    <br><br>
+                                    <label> Barrio </label>
+                                    <input type="text" ng-model="barrio">
+                                    <br><br>
+
+
+                                    <h4> <p style="font-size:25px; color:blue;">Informaci&oacuten del padre</p></h4>
+                                    <hr color="blue" size=4>
+                                    <label> Nombre del Padre </label>
+                                    <input type="text" ng-model="nombrePadre">
+                                    <br><br>
+                                    <label> Edad del Padre </label>
+                                    <input type="number" ng-model="edadPadre">
+                                    <br><br>
+                                    <label> Ocupaci&oacuten del Padre </label>
+                                    <input type="text" ng-model="ocupacionPadre">
+                                    <br><br>
+                                    <label> Telefono del Padre </label>
+                                    <input type="number" ng-model="telefonoPadre">
+                                    <br><br>
+
+
+
+                                    <h4>  <p style="font-size:25px; color:blue;">Informaci&oacuten de la madre</p></h4>
+                                    <hr color="blue" size=4>
+                                    <label> Nombre de la Madre </label>
+                                    <input type="text" ng-model="nombrMadre">
+                                    <br><br>
+                                    <label> Edad de la Madre </label>
+                                    <input type="number" ng-model="edadMadre">
+                                    <br><br>
+                                    <label> Ocupaci&oacuten de la Madre </label>
+                                    <input type="text" ng-model="ocupacionMadre">
+                                    <br><br>
+                                    <label> Telefono de la Madre </label>
+                                    <input type="number" ng-model="telefonoMadre">
+                                    <br><br>
+
+                                    <hr color="blue" size=4>
+                                    <label> Aseguradora </label>
+                                    <input type="text" ng-model="aseguradora">
+                                    <br><br>
+                                    <label> Vinculaci&oacuten </label>
+                                    <input type="text" ng-model="vinculacion">
+                                    <br><br>
+
+
+                                </div>
+                                <button type="submit" class="btn btn-outline btn-primary" ng-click="save()">Aceptar</button>
+                                <button type="reset" class="btn btn-outline btn-primary">Reiniciar</button>
+                            </form>
+                        </div>
+                    </div>
+                    <!-- /.row (nested) -->
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+</div>
+<!-- /#page-wrapper -->
+
+</div>
+<!-- /#wrapper -->

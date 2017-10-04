@@ -1,0 +1,169 @@
+<div ng-include="'/app/Templates/templateDoctor.html'"></div>
+<div id="page-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+          
+            <h2 class="page-header">Datos del ni&ntildeo</h2>
+        </div>
+        <!-- /.col-lg-12 -->
+    </div>
+    <!-- /.row -->
+    
+    <div class="row">
+        <div class="col-lg-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    Datos personales
+                </div>
+                
+                    <div class="panel panel-primary">
+                                              <div class="panel-heading">Informaci&oacuten del ni&ntildeo</div>
+                                              <div class="panel-body"></div>
+                                                                  <label> N&uacutemero de Identificaci&oacuten
+ 
+                        <small> {{person.id}} </small>
+                    </label>
+                    <br><br>
+
+                    <label> Nombre
+                        
+                        <small> {{person.name}} </small>
+                    </label>
+                    <br><br>
+                    
+                    <label> Sexo
+                     
+                        <small> {{person.sexo}} </small>
+                    </label>
+                    <br><br>
+
+
+<label> Lugar de Nacimiento
+	                        
+	                        <small> {{person.lugarDeNacimiento}} </small>
+	                    </label>
+	                    <br><br>
+<label> Fecha de Nacimiento
+	                       
+	                        <small> {{person.fechaDeNacimiento | date:'yyyy-MM-dd'}} </small>
+	                    </label>
+	                    <br><br>
+<label> N&uacutemero de Documento
+	                        
+	                        <small> {{person.numeroDocumento}} </small>
+	                    </label>
+	                    <br><br>
+                            
+                            
+<label> Ciudad
+	                        
+	                        <small> {{person.ciudad}} </small>
+	                    </label>
+	                    <br><br>
+<label> Localidad
+	                        
+	                        <small> {{person.localidad}} </small>
+	                    </label>
+	                    <br><br>
+<label> Barrio
+	                        
+	                        <small> {{person.barrio}} </small>
+	                    </label>
+                                                            </div>
+                <h4><p style="font-size:25px; color:blue;"></p></h4>
+                <hr color="blue" size=4>
+                
+	                    <br><br>
+                            
+                                 <div class="panel panel-primary">
+                                              <div class="panel-heading">Informaci&oacuten del Padre</div>
+                                              <div class="panel-body"></div>
+                                              <label> Nombre del Padre
+	                        
+	                        <small> {{person.nombrePadre}} </small>
+	                    </label>
+	                    <br><br>
+<label> Edad del Padre
+	                       
+	                        <small> {{person.edadPadre}} </small>
+	                    </label>
+	                    <br><br>
+<label> Ocupaci&oacuten del Padre
+	                       
+	                        <small> {{person.ocupacionPadre}} </small>
+	                    </label>
+                            <br><br>
+	                    
+<label> Telefono del Padre
+	          
+	                        <small> {{person.telefonoPadre}} </small>
+	                    </label>
+	                    <br><br>
+                        
+                                                            </div>
+                            <h4><p style="font-size:25px; color:blue;"></p></h4>
+                            <hr color="blue" size=4>
+    
+                                 <div class="panel panel-primary">
+                                              <div class="panel-heading">Informaci&oacuten de la Madre</div>
+                                              <div class="panel-body"></div>
+                                              <label> Nombre de la Madre
+	          
+	                        <small> {{person.nombrMadre}} </small>
+	                    </label>
+	                    <br><br>
+<label> Edad de la Madre
+	        
+	                        <small> {{person.edadMadre}} </small>
+	                    </label>
+	                    <br><br>
+<label> Ocupaci&oacuten de la Madre
+	                   
+	                        <small> {{person.ocupacionMadre}} </small>
+	                    </label>
+	                    <br><br>
+<label> Telefono de la Madre
+	            
+	                        <small> {{person.telefonoMadre}} </small>
+	                    </label>
+	                    <br><br>
+                            
+                            </div>
+                                 <div class="panel panel-primary">
+                                              <div class="panel-heading"></div>
+                                              <div class="panel-body"></div>
+                                                            
+                            
+                            <label> Aseguradora
+	            
+	                        <small> {{person.aseguradora}} </small>
+	                    </label>
+	                    <br><br>
+<label> Vinculaci&oacuten
+	                       
+	                        <small> {{person.vinculacion}} </small>
+	                    </label>
+	                    <br><br>
+                            </div>
+                                                            </div>
+                            <h4><p style="font-size:25px; color:blue;"></p></h4>
+                            <hr color="blue" size=4>
+
+                            <hr color="blue" size=4>
+<
+                            
+                    <button type="button" class="btn btn-primary btn-lg btn-block" ng-click="continueUP()">Actualizar Datos</button>
+                </div>
+                <!-- /.panel-body -->
+            </div>
+            <!-- /.panel -->
+        </div>
+        <!-- /.col-lg-4 -->
+    </div>
+    
+    <!-- /.row -->
+
+<!-- /#page-wrapper -->
+
+
+<!-- /#wrapper -->
