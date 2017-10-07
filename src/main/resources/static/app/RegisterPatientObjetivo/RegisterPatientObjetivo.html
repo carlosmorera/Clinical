@@ -71,13 +71,13 @@
                                     <div class="form-group">
                                         <label> Area </label>
                                         <select ng-model="areaSelected" ng-options="area as area.nombre for area in areas track by area.idarea" >
-                                            <option value="">--Elige opcion--</option>
+                                            <option value="">--Elige opci&oacuten--</option>
                                         </select>
                                         <br><br> <button type="button" class="btn btn-outline btn-primary" ng-click="areaSel()">Aceptar</button><br><br>
                                         <div class="form-group" ng-show="areasel">
                                         <label> Subarea </label>
                                         <select ng-model="subareaSelected" ng-options="subarea as subarea.nombre for subarea in subareas track by subarea.idsubarea" >
-                                            <option value="">--Elige opcion--</option>
+                                            <option value="">--Elige opci&oacuten--</option>
                                         </select>
                                             <br><br>
                                             <button type="button" class="btn btn-outline btn-primary" ng-click="subareaSel()">Aceptar</button>
@@ -86,7 +86,7 @@
                                         <div class="form-group" ng-show="subareasel">
                                             <label> Objetivo </label>
                                             <select ng-model="objetivoSelected" ng-options="objetivo as objetivo.nombre for objetivo in objetivos track by objetivo.idobjetivo" >
-                                                <option value="">--Elige opcion--</option>
+                                                <option value="">--Elige opci&oacuten--</option>
                                             </select>
                                             <br><br>
                                             <button type="button" class="btn btn-outline btn-primary" ng-click="saveRegisterObjetivo()">Guardar</button>

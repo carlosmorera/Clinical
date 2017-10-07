@@ -1,4 +1,7 @@
 <div ng-include="'/app/Templates/templateDoctor.html'"></div>
+<head>
+<meta charset="UTF-8">
+</head>
 <div id="wrapper">
     <div id="page-wrapper">
         <div class="row">
@@ -23,7 +26,7 @@
 
                                     <h4><p style="font-size:25px; color:blue;">Informaci&oacuten del ni&ntildeo</p></h4>
                                     <hr color="blue" size=4>
-                                    <label> N&uacutemero de identificaci&oacuten </label>
+                                    <label> Número de identificación </label>
                                     <input type="number" ng-model="id">
                                     <br><br>
                                     <label> Nombre </label>
@@ -43,7 +46,7 @@
                                     <label> Fecha de nacimiento </label>
                                     <input type="date" ng-model="fechaDeNacimiento" placeholder="yyyy-MM-dd" max ="{{maxBithDate| date: 'yyyy-MM-dd'}}}">
                                     <br><br>
-                                    <label> N&uacutemero documento </label>
+                                    <label> Número documento </label>
                                     <input type="number" ng-model="numeroDocumento">
 
 
@@ -52,12 +55,12 @@
                                     <select name="Doc" id="doc">
                                         <option value="1">Seleccione</option>
                                         <option value="3">Registro civil</option>
-                                        <option value="3">Tarjeta de indentidad</option>
+                                        <option value="3">Tarjeta de identidad</option>
                                         <option value="4">Pasaporte</option>
                                     </select>
 
                                     <br><br>
-                                    <label> Ciudad </label>
+                                    <label> Ciudad de residencia</label>
                                     <input type="text" ng-model="ciudad">
                                     <br><br>
                                     <label> Localidad </label>
@@ -76,10 +79,10 @@
                                     <label> Edad del Padre </label>
                                     <input type="number" ng-model="edadPadre">
                                     <br><br>
-                                    <label> Ocupaci&oacuten del Padre </label>
+                                    <label> Ocupación del Padre </label>
                                     <input type="text" ng-model="ocupacionPadre">
                                     <br><br>
-                                    <label> Telefono del Padre </label>
+                                    <label> Teléfono del Padre </label>
                                     <input type="number" ng-model="telefonoPadre">
                                     <br><br>
 
@@ -93,10 +96,10 @@
                                     <label> Edad de la Madre </label>
                                     <input type="number" ng-model="edadMadre">
                                     <br><br>
-                                    <label> Ocupaci&oacuten de la Madre </label>
+                                    <label> Ocupación de la Madre </label>
                                     <input type="text" ng-model="ocupacionMadre">
                                     <br><br>
-                                    <label> Telefono de la Madre </label>
+                                    <label> Teléfono de la Madre </label>
                                     <input type="number" ng-model="telefonoMadre">
                                     <br><br>
 
@@ -104,7 +107,7 @@
                                     <label> Aseguradora </label>
                                     <input type="text" ng-model="aseguradora">
                                     <br><br>
-                                    <label> Vinculaci&oacuten </label>
+                                    <label> Vinculación </label>
                                     <input type="text" ng-model="vinculacion">
                                     <br><br>
 
