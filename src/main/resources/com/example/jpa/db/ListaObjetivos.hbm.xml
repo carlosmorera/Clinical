@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated 9/10/2017 03:30:31 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+    <class name="com.example.jpa.db.ListaObjetivos" table="lista_objetivos" catalog="clinical" optimistic-lock="version">
+        <id name="objetivoId" type="java.lang.Long">
+            <column name="objetivo_id" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="subareas" class="com.example.jpa.db.Subareas" fetch="select">
+            <column name="subarea" not-null="true" />
+        </many-to-one>
+        <property name="nombre" type="string">
+            <column name="nombre" length="250" not-null="true" />
+        </property>
+    </class>
+</hibernate-mapping>
