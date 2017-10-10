@@ -54,7 +54,7 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
                                             idobjetivo: null,
                                             nombre: null
                                         };
-                                        $http.get('/areas/all').success(function (data) {
+                                        $http.get('/areas/all').$promise.then(function (data) {
                                             var i;
                                             for (i=0;i<data.length;i++) {
                                                 $scope.areas.push(data[i].nombre);
