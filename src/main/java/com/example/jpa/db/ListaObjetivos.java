@@ -2,6 +2,7 @@ package com.example.jpa.db;
 // Generated 9/10/2017 03:30:25 PM by Hibernate Tools 4.3.1
 
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -45,8 +46,8 @@ public class ListaObjetivos  implements java.io.Serializable {
     public void setObjetivoId(Long objetivoId) {
         this.objetivoId = objetivoId;
     }
-
-@ManyToOne(fetch=FetchType.LAZY)
+@JsonIgnore
+@ManyToOne(fetch=FetchType.EAGER)
     @JoinColumn(name="subarea", nullable=false)
     public Subareas getSubareas() {
         return this.subareas;
