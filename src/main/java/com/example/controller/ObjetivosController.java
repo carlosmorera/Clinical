@@ -29,27 +29,7 @@ public class ObjetivosController {
     
     @Autowired
     private AreaServices as;
-    
-    @RequestMapping(method = RequestMethod.GET, path = "/areas/all")
-    public ResponseEntity<?> getAllAreas() {
-        List<Areas> ans = as.getAllAreas();
-        return new ResponseEntity<>(as, HttpStatus.OK);
         
-    }
-    
-    @RequestMapping(value = "/areas/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseEntity<Areas> getAreaByID(@PathVariable("id") Long id) {
-        Areas a = as.getAreaById(id);
-        return new ResponseEntity<>(a, HttpStatus.OK);
-    }
-    
-    @RequestMapping(value = "/areas/insert", method = RequestMethod.POST)
-    public ResponseEntity<Void> insertArea(@RequestBody Areas p) {
-        as.saveArea(p);
-        return new ResponseEntity<>(HttpStatus.CREATED);
-    }
-    
     @RequestMapping(method = RequestMethod.GET, path = "/subareas/all")
     public ResponseEntity<?> getSubAreas() {
         List<Subareas> ans = as.getAllSubareas();
