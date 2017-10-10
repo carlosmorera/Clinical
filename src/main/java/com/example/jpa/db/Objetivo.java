@@ -2,7 +2,6 @@ package com.example.jpa.db;
 // Generated Sep 15, 2017 11:44:15 PM by Hibernate Tools 4.3.1
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.Date;
 import java.util.Objects;
 import javax.persistence.Column;
@@ -22,10 +21,8 @@ import javax.persistence.TemporalType;
  */
 @Entity
 @Table(name = "objetivos",
-        catalog = "clinical"
+         catalog = "clinical"
 )
-@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
-
 public class Objetivo implements java.io.Serializable {
 
     private Long objetivoId;
@@ -170,5 +167,8 @@ public class Objetivo implements java.io.Serializable {
         }
         return true;
     }
+
+  
+    
 
 }

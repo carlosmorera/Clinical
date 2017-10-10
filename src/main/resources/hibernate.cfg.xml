@@ -46,8 +46,9 @@ Contributor(s):
     <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/clinical?zeroDateTimeBehavior=convertToNull</property>
     <property name="hibernate.connection.username">root</property>
     <property name="hibernate.connection.password">1234</property>
-    <mapping resource="com/example/jpa/db/Areas.hbm.xml"/>
-    <mapping resource="com/example/jpa/db/Subareas.hbm.xml"/>
-    <mapping resource="com/example/jpa/db/ListaObjetivos.hbm.xml"/>
+    <mapping resource="com/example/jpa/db/Puntuacionescuatrimestral.hbm.xml"/>
+    <mapping resource="com/example/jpa/db/Objetivos.hbm.xml"/>
+    <mapping resource="com/example/jpa/db/Objetivoscurriculum.hbm.xml"/>
+    <mapping resource="com/example/jpa/db/Persons.hbm.xml"/>
   </session-factory>
 </hibernate-configuration>

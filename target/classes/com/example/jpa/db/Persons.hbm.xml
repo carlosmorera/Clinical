@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 15, 2017 11:44:15 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="clinical" name="com.example.jpa.db.Person" optimistic-lock="version" table="persons">
+    <id name="id" type="long">
+      <column name="id"/>
+      <generator class="assigned"/>
+    </id>
+    <property name="name" type="string">
+      <column length="65535" name="name"/>
+    </property>
+    <property name="sexo" type="string">
+      <column length="65535" name="sexo"/>
+    </property>
+    <property name="lugarDeNacimiento" type="string">
+      <column length="65535" name="lugar_de_nacimiento"/>
+    </property>
+    <property name="fechaDeNacimiento" type="date">
+      <column length="10" name="fecha_de_nacimiento"/>
+    </property>
+    <property name="numeroDocumento" type="java.lang.Integer">
+      <column name="numero_documento"/>
+    </property>
+    <property name="ciudad" type="string">
+      <column length="65535" name="ciudad"/>
+    </property>
+    <property name="localidad" type="string">
+      <column length="65535" name="localidad"/>
+    </property>
+    <property name="barrio" type="string">
+      <column length="65535" name="barrio"/>
+    </property>
+    <property name="nombrePadre" type="string">
+      <column length="65535" name="nombre_padre"/>
+    </property>
+    <property name="edadPadre" type="java.lang.Integer">
+      <column name="edad_padre"/>
+    </property>
+    <property name="ocupacionPadre" type="string">
+      <column length="65535" name="ocupacion_padre"/>
+    </property>
+    <property name="telefonoPadre" type="java.lang.Long">
+      <column name="telefono_padre"/>
+    </property>
+    <property name="nombrMadre" type="string">
+      <column length="65535" name="nombr_madre"/>
+    </property>
+    <property name="edadMadre" type="java.lang.Integer">
+      <column name="edad_madre"/>
+    </property>
+    <property name="ocupacionMadre" type="string">
+      <column length="65535" name="ocupacion_madre"/>
+    </property>
+    <property name="telefonoMadre" type="java.lang.Long">
+      <column name="telefono_madre"/>
+    </property>
+    <property name="aseguradora" type="string">
+      <column length="65535" name="aseguradora"/>
+    </property>
+    <property name="vinculacion" type="string">
+      <column length="65535" name="vinculacion"/>
+    </property>
+    <property name="password" type="string">
+      <column length="65535" name="password"/>
+    </property>
+    <property name="role" type="string">
+      <column length="65535" name="role"/>
+    </property>
+    <property name="historiaDelProblema" type="string">
+      <column length="65535" name="historia_del_problema"/>
+    </property>
+    <property name="metodoDeEvaluacion" type="string">
+      <column length="65535" name="metodo_de_evaluacion"/>
+    </property>
+    <property name="informacionGeneral" type="string">
+      <column length="65535" name="informacion_general"/>
+    </property>
+    <property name="actividadesBasicasGenerales" type="string">
+      <column length="65535" name="actividades_basicas_generales"/>
+    </property>
+    <property name="habilidadesEspeciales" type="string">
+      <column length="65535" name="habilidades_especiales"/>
+    </property>
+    <property name="areasDeEvaluacion" type="string">
+      <column length="65535" name="areas_de_evaluacion"/>
+    </property>
+    <property name="problemasComportamentales" type="string">
+      <column length="65535" name="problemas_comportamentales"/>
+    </property>
+    <property name="psicologia" type="string">
+      <column length="65535" name="psicologia"/>
+    </property>
+    <property name="resultados" type="string">
+      <column length="65535" name="resultados"/>
+    </property>
+    <property name="analisisDeCriteriosDiagnostico" type="string">
+      <column length="65535" name="analisis_de_criterios_diagnostico"/>
+    </property>
+    <property name="compromiso" type="string">
+      <column length="65535" name="compromiso"/>
+    </property>
+    <set fetch="select" inverse="true" lazy="true" name="programaIndividual" table="objetivos">
+      <key>
+        <column name="persons_id" not-null="true"/>
+      </key>
+      <one-to-many class="com.example.jpa.db.Objetivo"/>
+    </set>
+    <set fetch="select" inverse="true" lazy="true" name="objetivoscurriculums" table="objetivoscurriculum">
+      <key>
+        <column name="persons_id" not-null="true"/>
+      </key>
+      <one-to-many class="com.example.jpa.db.ObjetivoCurriculum"/>
+    </set>
+  </class>
+</hibernate-mapping>

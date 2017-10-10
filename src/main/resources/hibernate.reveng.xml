@@ -41,7 +41,8 @@ Contributor(s):
 -->
 <hibernate-reverse-engineering>
   <schema-selection match-catalog="clinical"/>
-  <table-filter match-name="lista_objetivos"/>
-  <table-filter match-name="subareas"/>
-  <table-filter match-name="areas"/>
+  <table-filter match-name="objetivoscurriculum"/>
+  <table-filter match-name="persons"/>
+  <table-filter match-name="puntuacionescuatrimestral"/>
+  <table-filter match-name="objetivos"/>
 </hibernate-reverse-engineering>

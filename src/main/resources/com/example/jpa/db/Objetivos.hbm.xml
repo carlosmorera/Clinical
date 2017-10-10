@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN" "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+<!-- Generated Sep 15, 2017 11:44:15 PM by Hibernate Tools 4.3.1 -->
+<hibernate-mapping>
+  <class catalog="clinical" name="com.example.jpa.db.Objetivo" optimistic-lock="version" table="objetivos">
+    <id name="objetivoId" type="java.lang.Long">
+      <column name="objetivo_id"/>
+      <generator class="identity"/>
+    </id>
+    <many-to-one class="com.example.jpa.db.Person" fetch="select" name="persons">
+      <column name="persons_id" not-null="true"/>
+    </many-to-one>
+    <property name="area" type="string">
+      <column length="65535" name="area" not-null="true"/>
+    </property>
+    <property name="subarea" type="string">
+      <column length="65535" name="subarea" not-null="true"/>
+    </property>
+    <property name="nombreObjetivo" type="string">
+      <column length="65535" name="nombre_objetivo" not-null="true"/>
+    </property>
+    <property name="puntuacion" type="string">
+      <column length="65535" name="puntuacion" not-null="true"/>
+    </property>
+    <property name="date" type="date">
+      <column length="10" name="date" not-null="true"/>
+    </property>
+    <property name="nombreTerapeuta" type="string">
+      <column length="65535" name="nombre_terapeuta" not-null="true"/>
+    </property>
+  </class>
+</hibernate-mapping>
