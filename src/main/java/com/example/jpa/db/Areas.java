@@ -63,7 +63,7 @@ public class Areas  implements java.io.Serializable {
         this.nombre = nombre;
     }
 
-@OneToMany(fetch=FetchType.LAZY, mappedBy="areas")
+@OneToMany(fetch=FetchType.EAGER, mappedBy="areas")
     public Set<Subareas> getSubareases() {
         return this.subareases;
     }
