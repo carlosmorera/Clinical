@@ -25,46 +25,27 @@ import org.springframework.web.bind.annotation.RestController;
  * @author carlos
  */
 @RestController
+@RequestMapping("/objetivos")
 public class ObjetivosController {
-    
+
     @Autowired
     private AreaServices as;
-        
-    @RequestMapping(method = RequestMethod.GET, path = "/subareas/all")
-    public ResponseEntity<?> getSubAreas() {
-        List<Subareas> ans = as.getAllSubareas();
-        return new ResponseEntity<>(as, HttpStatus.OK);
-        
-    }
-    
-    @RequestMapping(value = "/subareas/{id}", method = RequestMethod.GET)
-    @ResponseBody
-    public ResponseEntity<Subareas> getSubAreaById(@PathVariable("id") Long id) {
-        Subareas a = as.getSubareaById(id);
-        return new ResponseEntity<>(a, HttpStatus.OK);
-    }
-    
-    @RequestMapping(value = "/subareas/insert", method = RequestMethod.POST)
-    public ResponseEntity<Void> insertProducto(@RequestBody Subareas p) {
-        as.saveSubarea(p);
-        return new ResponseEntity<>(HttpStatus.CREATED);
-    }
-    
-    @RequestMapping(method = RequestMethod.GET, path = "/objetivos/all")
+
+    @RequestMapping(method = RequestMethod.GET, value = "/all")
     public ResponseEntity<?> getAllObejtivos() {
         List<ListaObjetivos> ans = as.getAllObjetivos();
-        return new ResponseEntity<>(as, HttpStatus.OK);
-        
+        return new ResponseEntity<>(ans, HttpStatus.OK);
+
     }
-    
-    @RequestMapping(value = "/objetivos/{id}", method = RequestMethod.GET)
+
+    @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<ListaObjetivos> getObjetivosBy(@PathVariable("id") Long id) {
         ListaObjetivos a = as.getObjetivosById(id);
         return new ResponseEntity<>(a, HttpStatus.OK);
     }
-    
-    @RequestMapping(value = "/objetivos/insert", method = RequestMethod.POST)
+
+    @RequestMapping(value = "/insert", method = RequestMethod.POST)
     public ResponseEntity<Void> insertObjetivo(@RequestBody ListaObjetivos p) {
         as.saveObjetivo(p);
         return new ResponseEntity<>(HttpStatus.CREATED);

@@ -5,7 +5,7 @@
  */
 package com.example.controller;
 
-import com.example.jpa.db.Areas;
+import com.example.jpa.db.Subareas;
 import com.example.services.AreaServices;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -23,29 +23,29 @@ import org.springframework.web.bind.annotation.RestController;
  * @author carlos
  */
 @RestController
-@RequestMapping("/areas")
-public class AreasController {
+@RequestMapping("/subareas")
+public class SubareasController {
 
     @Autowired
     private AreaServices as;
 
     @RequestMapping(method = RequestMethod.GET, value = "/all")
-    public ResponseEntity<List<Areas>> getAllAreas() {
-        List<Areas> ans = as.getAllAreas();
+    public ResponseEntity<?> getSubAreas() {
+        List<Subareas> ans = as.getAllSubareas();
         return new ResponseEntity<>(ans, HttpStatus.OK);
 
     }
 
     @RequestMapping(value = "/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<Areas> getAreaByID(@PathVariable("id") Long id) {
-        Areas a = as.getAreaById(id);
+    public ResponseEntity<Subareas> getSubAreaById(@PathVariable("id") Long id) {
+        Subareas a = as.getSubareaById(id);
         return new ResponseEntity<>(a, HttpStatus.OK);
     }
 
     @RequestMapping(value = "/insert", method = RequestMethod.POST)
-    public ResponseEntity<Void> insertArea(@RequestBody Areas p) {
-        as.saveArea(p);
+    public ResponseEntity<Void> insertProducto(@RequestBody Subareas p) {
+        as.saveSubarea(p);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
 }
