@@ -9,7 +9,7 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
                 });
             }])
 
-        .controller('RegisterPatientObjetivoCtrl', ['$rootScope', '$scope', 'persons', 'person', 'deleteObjetivo', '$http', '$resource', '$location', function ($rootScope, $scope, persons, person, deleteObjetivo, $http, $resource, $location) {
+        .controller('RegisterPatientObjetivoCtrl', ['$rootScope', '$scope', 'persons', 'person', 'deleteObjetivo', 'getAreas' , '$http', '$resource', '$location', function ($rootScope, $scope, persons, person, deleteObjetivo, getAreas, $http, $resource, $location) {
                 person.get({personId: "" + $rootScope.patientId})
                         .$promise.then(
                                 //success
@@ -54,7 +54,8 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
                                             idobjetivo: null,
                                             nombre: null
                                         };
-                                        $http.get('/areas/all').$promise.then(function (data) {
+                                        var as = getAreas.get();
+                                        $http.get('/areas/all').success(function (data) {
                                             var i;
                                             for (i=0;i<data.length;i++) {
                                                 $scope.areas.push(data[i].nombre);
