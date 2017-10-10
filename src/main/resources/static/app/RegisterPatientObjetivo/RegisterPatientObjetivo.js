@@ -55,9 +55,9 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
                                             nombre: null
                                         };
                                         $http.get('/areas/all').success(function (data) {
-                                            var x;
-                                            for (x in data) {
-                                                $scope.areas.push(data[x].nombre);
+                                            var i;
+                                            for (i=0;i<data.length;i++) {
+                                                $scope.areas.push(data[i].nombre);
                                             }
                                         });
 
@@ -68,9 +68,9 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
                                             var areaS = $scope.areaSelected.id
                                             $http.get('/areas/areaS').success(function (data) {
                                                 var subareas = data.subareases;
-                                                var x
-                                                for (x in subareas) {
-                                                    $scope.subareas.push(subareas[x].nombre);
+                                                var i;
+                                                for (i=0;i<subareas.length;i++) {
+                                                    $scope.subareas.push(subareas[i].nombre);
 
                                                 }
                                             });
