@@ -20,8 +20,8 @@ public interface AreaServices {
     public Areas getAreaById(Long ig);
     
     public void saveSubarea(Subareas a);
-    public List<Subareas> getAllSubreas();
-    public Subareas getSubreaById(Long ig);
+    public List<Subareas> getAllSubareas();
+    public Subareas getSubareaById(Long ig);
     
     public void saveObjetivo(ListaObjetivos a);
     public List<ListaObjetivos> getAllObjetivos();

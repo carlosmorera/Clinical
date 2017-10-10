@@ -2,6 +2,7 @@ package com.example.jpa.db;
 // Generated 9/10/2017 03:30:25 PM by Hibernate Tools 4.3.1
 
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.util.HashSet;
 import java.util.Set;
 import javax.persistence.Column;
@@ -20,6 +21,7 @@ import javax.persistence.Table;
 @Table(name="areas"
     ,catalog="clinical"
 )
+@JsonIgnoreProperties({"hibernateLazyInitializer", "handler"})
 public class Areas  implements java.io.Serializable {
 
 

@@ -27,15 +27,14 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ObjetivosController {
     
-    
     @Autowired
     private AreaServices as;
-
+    
     @RequestMapping(method = RequestMethod.GET, path = "/areas/all")
-    public ResponseEntity<?> getAllAreas(){
-    	List<Areas> ans = as.getAllAreas();
+    public ResponseEntity<?> getAllAreas() {
+        List<Areas> ans = as.getAllAreas();
         return new ResponseEntity<>(as, HttpStatus.OK);
-		
+        
     }
     
     @RequestMapping(value = "/areas/{id}", method = RequestMethod.GET)
@@ -52,16 +51,16 @@ public class ObjetivosController {
     }
     
     @RequestMapping(method = RequestMethod.GET, path = "/subareas/all")
-    public ResponseEntity<?> getSubAreas(){
-    	List<Subareas> ans = as.getAllSubreas();
+    public ResponseEntity<?> getSubAreas() {
+        List<Subareas> ans = as.getAllSubareas();
         return new ResponseEntity<>(as, HttpStatus.OK);
-		
+        
     }
     
     @RequestMapping(value = "/subareas/{id}", method = RequestMethod.GET)
     @ResponseBody
     public ResponseEntity<Subareas> getSubAreaById(@PathVariable("id") Long id) {
-        Subareas a = as.getSubreaById(id);
+        Subareas a = as.getSubareaById(id);
         return new ResponseEntity<>(a, HttpStatus.OK);
     }
     
@@ -72,10 +71,10 @@ public class ObjetivosController {
     }
     
     @RequestMapping(method = RequestMethod.GET, path = "/objetivos/all")
-    public ResponseEntity<?> getAllObejtivos(){
-    	List<ListaObjetivos> ans = as.getAllObjetivos();
+    public ResponseEntity<?> getAllObejtivos() {
+        List<ListaObjetivos> ans = as.getAllObjetivos();
         return new ResponseEntity<>(as, HttpStatus.OK);
-		
+        
     }
     
     @RequestMapping(value = "/objetivos/{id}", method = RequestMethod.GET)

@@ -48,12 +48,12 @@ public class AreaServicesImpl implements AreaServices {
     }
 
     @Override
-    public List<Subareas> getAllSubreas() {
+    public List<Subareas> getAllSubareas() {
         return subRepo.findAll();
     }
 
     @Override
-    public Subareas getSubreaById(Long ig) {
+    public Subareas getSubareaById(Long ig) {
         return subRepo.findOne(ig);
     }
 
