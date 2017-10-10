@@ -55,12 +55,8 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
           nombre:null
         };
          $http.get('/areas/all').success(function (data) {
-             var fileToRead=data;
-             var liness = data.split('\n');
-             for(var line = 0; line < liness.length; line++){
-               var a={idarea:line+1,nombre:liness[line]}
-               $scope.areas.push(a);
-
+             for(area in data){        
+               $scope.areas.push(area.nombre);
              }
          });
 
