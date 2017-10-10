@@ -6,6 +6,8 @@
 package com.example.controller;
 
 import com.example.jpa.db.Areas;
+import com.example.jpa.db.ListaObjetivos;
+import com.example.jpa.db.Subareas;
 import com.example.services.AreaServices;
 import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -30,23 +32,62 @@ public class ObjetivosController {
     private AreaServices as;
 
     @RequestMapping(method = RequestMethod.GET, path = "/areas/all")
-    public ResponseEntity<?> getPersons(){
+    public ResponseEntity<?> getAllAreas(){
     	List<Areas> ans = as.getAllAreas();
         return new ResponseEntity<>(as, HttpStatus.OK);
 		
     }
     
-    @RequestMapping(value = "areas/{id}", method = RequestMethod.GET)
+    @RequestMapping(value = "/areas/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public ResponseEntity<Areas> getProducto(@PathVariable("id") Long id) {
+    public ResponseEntity<Areas> getAreaByID(@PathVariable("id") Long id) {
         Areas a = as.getAreaById(id);
         return new ResponseEntity<>(a, HttpStatus.OK);
     }
     
-    @RequestMapping(value = "areas/insert", method = RequestMethod.POST)
-    public ResponseEntity<Void> insertProducto(@RequestBody Areas p) {
+    @RequestMapping(value = "/areas/insert", method = RequestMethod.POST)
+    public ResponseEntity<Void> insertArea(@RequestBody Areas p) {
         as.saveArea(p);
         return new ResponseEntity<>(HttpStatus.CREATED);
     }
     
+    @RequestMapping(method = RequestMethod.GET, path = "/subareas/all")
+    public ResponseEntity<?> getSubAreas(){
+    	List<Subareas> ans = as.getAllSubreas();
+        return new ResponseEntity<>(as, HttpStatus.OK);
+		
+    }
+    
+    @RequestMapping(value = "/subareas/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<Subareas> getSubAreaById(@PathVariable("id") Long id) {
+        Subareas a = as.getSubreaById(id);
+        return new ResponseEntity<>(a, HttpStatus.OK);
+    }
+    
+    @RequestMapping(value = "/subareas/insert", method = RequestMethod.POST)
+    public ResponseEntity<Void> insertProducto(@RequestBody Subareas p) {
+        as.saveSubarea(p);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
+    
+    @RequestMapping(method = RequestMethod.GET, path = "/objetivos/all")
+    public ResponseEntity<?> getAllObejtivos(){
+    	List<ListaObjetivos> ans = as.getAllObjetivos();
+        return new ResponseEntity<>(as, HttpStatus.OK);
+		
+    }
+    
+    @RequestMapping(value = "/objetivos/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public ResponseEntity<ListaObjetivos> getObjetivosBy(@PathVariable("id") Long id) {
+        ListaObjetivos a = as.getObjetivosById(id);
+        return new ResponseEntity<>(a, HttpStatus.OK);
+    }
+    
+    @RequestMapping(value = "/objetivos/insert", method = RequestMethod.POST)
+    public ResponseEntity<Void> insertObjetivo(@RequestBody ListaObjetivos p) {
+        as.saveObjetivo(p);
+        return new ResponseEntity<>(HttpStatus.CREATED);
+    }
 }
