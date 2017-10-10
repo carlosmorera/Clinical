@@ -66,7 +66,7 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
                                             $scope.subareas = [];
                                             $scope.areasel = true;
                                             var areaS = $scope.areaSelected.id
-                                            $http.get('/areas/areaS').success(function (data) {
+                                            $http.get('/areas/areaS').$promise.then(function (data) {
                                                 var subareas = data.subareases;
                                                 var i;
                                                 for (i=0;i<subareas.length;i++) {
