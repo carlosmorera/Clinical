@@ -54,7 +54,7 @@ angular.module('myApp.RegisterPatientObjetivo', ['ngRoute'])
           idobjetivo:null,
           nombre:null
         };
-         $http.get('/app/CurriculumAnthiros/Areas/areas.txt').success(function (data) {
+         $http.get('/areas/all').success(function (data) {
              var fileToRead=data;
              var liness = data.split('\n');
              for(var line = 0; line < liness.length; line++){
