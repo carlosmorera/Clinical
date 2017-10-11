@@ -34,11 +34,11 @@ public class Person implements java.io.Serializable {
     private String localidad;
     private String barrio;
     private String nombrePadre;
-    private Integer edadPadre;
+    private Date fechaNacimientoPadre;
     private String ocupacionPadre;
     private Long telefonoPadre;
     private String nombrMadre;
-    private Integer edadMadre;
+    private Date fechaNacimientoMadre;
     private String ocupacionMadre;
     private Long telefonoMadre;
     private String aseguradora;
@@ -66,7 +66,7 @@ public class Person implements java.io.Serializable {
         this.id = id;
     }
 
-    public Person(long id, String name, String sexo, String lugarDeNacimiento, Date fechaDeNacimiento, Integer numeroDocumento, String ciudad, String localidad, String barrio, String nombrePadre, Integer edadPadre, String ocupacionPadre, Long telefonoPadre, String nombrMadre, Integer edadMadre, String ocupacionMadre, Long telefonoMadre, String aseguradora, String vinculacion, String password, String role, String historiaDelProblema, String metodoDeEvaluacion, String informacionGeneral, String actividadesBasicasGenerales, String habilidadesEspeciales, String areasDeEvaluacion, String problemasComportamentales, String psicologia, String resultados, String analisisDeCriteriosDiagnostico, String compromiso, Set<Objetivo> objetivoses, Set<ObjetivoCurriculum> objetivoscurriculums) {
+    public Person(long id, String name, String sexo, String lugarDeNacimiento, Date fechaDeNacimiento, Integer numeroDocumento, String ciudad, String localidad, String barrio, String nombrePadre, Date edadPadre, String ocupacionPadre, Long telefonoPadre, String nombrMadre, Date edadMadre, String ocupacionMadre, Long telefonoMadre, String aseguradora, String vinculacion, String password, String role, String historiaDelProblema, String metodoDeEvaluacion, String informacionGeneral, String actividadesBasicasGenerales, String habilidadesEspeciales, String areasDeEvaluacion, String problemasComportamentales, String psicologia, String resultados, String analisisDeCriteriosDiagnostico, String compromiso, Set<Objetivo> objetivoses, Set<ObjetivoCurriculum> objetivoscurriculums) {
         this.id = id;
         this.name = name;
         this.sexo = sexo;
@@ -77,11 +77,11 @@ public class Person implements java.io.Serializable {
         this.localidad = localidad;
         this.barrio = barrio;
         this.nombrePadre = nombrePadre;
-        this.edadPadre = edadPadre;
+        this.fechaNacimientoPadre = edadPadre;
         this.ocupacionPadre = ocupacionPadre;
         this.telefonoPadre = telefonoPadre;
         this.nombrMadre = nombrMadre;
-        this.edadMadre = edadMadre;
+        this.fechaNacimientoMadre = edadMadre;
         this.ocupacionMadre = ocupacionMadre;
         this.telefonoMadre = telefonoMadre;
         this.aseguradora = aseguradora;
@@ -197,12 +197,12 @@ public class Person implements java.io.Serializable {
     }
 
     @Column(name = "edad_padre")
-    public Integer getEdadPadre() {
-        return this.edadPadre;
+    public Date getFechaNacimientoPadre() {
+        return this.fechaNacimientoPadre;
     }
 
-    public void setEdadPadre(Integer edadPadre) {
-        this.edadPadre = edadPadre;
+    public void setFechaNacimientoPadre(Date fechaNacimientoPadre) {
+        this.fechaNacimientoPadre = fechaNacimientoPadre;
     }
 
     @Column(name = "ocupacion_padre", length = 65535)
@@ -233,12 +233,12 @@ public class Person implements java.io.Serializable {
     }
 
     @Column(name = "edad_madre")
-    public Integer getEdadMadre() {
-        return this.edadMadre;
+    public Date getFechaNacimientoMadre() {
+        return this.fechaNacimientoMadre;
     }
 
-    public void setEdadMadre(Integer edadMadre) {
-        this.edadMadre = edadMadre;
+    public void setFechaNacimientoMadre(Date fechaNacimientoMadre) {
+        this.fechaNacimientoMadre = fechaNacimientoMadre;
     }
 
     @Column(name = "ocupacion_madre", length = 65535)

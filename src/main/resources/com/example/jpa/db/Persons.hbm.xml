@@ -34,8 +34,8 @@
     <property name="nombrePadre" type="string">
       <column length="65535" name="nombre_padre"/>
     </property>
-    <property name="edadPadre" type="java.lang.Integer">
-      <column name="edad_padre"/>
+    <property name="fechaNacimientoPadre" type="date">
+      <column name="fecha_nacimiento_padre"/>
     </property>
     <property name="ocupacionPadre" type="string">
       <column length="65535" name="ocupacion_padre"/>
@@ -46,8 +46,8 @@
     <property name="nombrMadre" type="string">
       <column length="65535" name="nombr_madre"/>
     </property>
-    <property name="edadMadre" type="java.lang.Integer">
-      <column name="edad_madre"/>
+    <property name="fechaNacimientoMadre" type="date">
+      <column name="fecha_nacimiento_madre"/>
     </property>
     <property name="ocupacionMadre" type="string">
       <column length="65535" name="ocupacion_madre"/>

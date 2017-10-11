@@ -41,11 +41,11 @@ $scope.sexo=null;
 			, "localidad":$scope.localidad
 			, "barrio":$scope.barrio
 			, "nombrePadre":$scope.nombrePadre
-			, "edadPadre":$scope.edadPadre
+			, "fechaNacimientoPadre":$scope.fechaNacimientoPadre
 			, "ocupacionPadre":$scope.ocupacionPadre
 			, "telefonoPadre":$scope.telefonoPadre
 			, "nombrMadre":$scope.nombrMadre
-			, "edadMadre":$scope.edadMadre
+			, "fechaNacimientoMadre":$scope.fechaNacimientoMadre
 			, "ocupacionMadre":$scope.ocupacionMadre
 			, "telefonoMadre":$scope.telefonoMadre
 			, "aseguradora":$scope.aseguradora
