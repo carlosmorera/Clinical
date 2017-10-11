@@ -24,8 +24,8 @@ angular.module('myApp.PatientProfile', ['ngRoute'])
                                             var edad_padre = fechaHoy - $scope.person.fechaNacimientoPadre;
                                             var edadFechaM = new Date(edad_madre);
                                             var edadFechaP = new Date(edad_padre);
-                                            $scope.edadMadre = Math.abs(edadFechaM.getUTCFullYear() - 1970);
-                                            $scope.edadPadre = Math.abs(edadFechaP.getUTCFullYear() - 1970);
+                                            if($scope.person.fechaNacimientoMadre != null){$scope.edadMadre = Math.abs(edadFechaM.getUTCFullYear() - 1970)};
+                                            if($scope.person.fechaNacimientoPadre != null){$scope.edadPadre = Math.abs(edadFechaP.getUTCFullYear() - 1970)};
 
 
                                         },
