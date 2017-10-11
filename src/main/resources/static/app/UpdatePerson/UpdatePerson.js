@@ -33,7 +33,7 @@ angular.module('myApp.UpdatePerson', ['ngRoute'])
                                                 $scope.name = null;
                                                 $scope.lugarDeNacimiento = null;
                                                 $scope.fechaDeNacimiento = null
-                                                $scope.nombreMadre = null;
+                                                $scope.nombrMadre = null;
                                                 $scope.nombrePadre = null;
                                                 $scope.ciudad = null;
                                                 $scope.numeroDocumento = null;
@@ -68,8 +68,8 @@ angular.module('myApp.UpdatePerson', ['ngRoute'])
                                                                                 if ($scope.fechaDeNacimiento != null && $scope.fechaDeNacimiento != '') {
                                                                                     $scope.personT.fechaDeNacimiento = $scope.fechaDeNacimiento;
                                                                                 }
-                                                                                if ($scope.nombreMadre != null && $scope.nombreMadre != '') {
-                                                                                    $scope.personT.nombreMadre = $scope.nombreMadre;
+                                                                                if ($scope.nombrMadre != null && $scope.nombrMadre != '') {
+                                                                                    $scope.personT.nombrMadre = $scope.nombrMadre;
                                                                                 }
                                                                                 if ($scope.nombrePadre != null && $scope.nombrePadre != '') {
                                                                                     $scope.personT.nombrePadre = $scope.nombrePadre;
