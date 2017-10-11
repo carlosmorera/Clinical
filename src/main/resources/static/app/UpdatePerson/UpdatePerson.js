@@ -34,10 +34,10 @@ angular.module('myApp.UpdatePerson', ['ngRoute'])
                 $scope.numeroDocumento=null;
 		$scope.localidad=null;
 		$scope.barrio=null;
-		$scope.edadPadre=null;
+		$scope.fechaNacimientoPadre=null;
 		$scope.ocupacionPadre=null;
 		$scope.telefonoPadre=null;
-		$scope.edadMadre=null;
+		$scope.fechaNacimientoMadre=null;
 		$scope.ocupacionMadre=null;
 		$scope.telefonoMadre=null;
 		$scope.aseguradora=null;
@@ -63,8 +63,8 @@ if($scope.localidad!=null&&$scope.localidad!=''){
 if($scope.barrio!=null&&$scope.barrio!=''){
 	$scope.personT.barrio=$scope.barrio;
 }
-if($scope.edadPadre!=null&&$scope.edadPadre!=''){
-	$scope.personT.edadPadre=$scope.edadPadre;
+if($scope.fechaNacimientoPadre!=null&&$scope.fechaNacimientoPadre!=''){
+	$scope.personT.fechaNacimientoPadre=$scope.fechaNacimientoPadre;
 }
 if($scope.ocupacionPadre!=null&&$scope.ocupacionPadre!=''){
 	$scope.personT.ocupacionPadre=$scope.ocupacionPadre;
@@ -72,8 +72,8 @@ if($scope.ocupacionPadre!=null&&$scope.ocupacionPadre!=''){
 if($scope.telefonoPadre!=null&&$scope.telefonoPadre!=''){
 	$scope.personT.telefonoPadre=$scope.telefonoPadre;
 }
-if($scope.edadMadre!=null&&$scope.edadMadre!=''){
-	$scope.personT.edadMadre=$scope.edadMadre;
+if($scope.fechaNacimientoMadre!=null&&$scope.fechaNacimientoMadre!=''){
+	$scope.personT.fechaNacimientoMadre=$scope.fechaNacimientoMadre;
 }
 if($scope.ocupacionMadre!=null&&$scope.ocupacionMadre!=''){
 	$scope.personT.ocupacionMadre=$scope.ocupacionMadre;
