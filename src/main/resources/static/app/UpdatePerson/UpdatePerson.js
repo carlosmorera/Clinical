@@ -31,7 +31,6 @@ angular.module('myApp.UpdatePerson', ['ngRoute'])
                                                             );
                                                         };
                                                 $scope.name = null;
-                                                $scope.sexo = null;
                                                 $scope.lugarDeNacimiento = null;
                                                 $scope.fechaDeNacimiento = null
                                                 $scope.nombreMadre = null;
@@ -62,10 +61,7 @@ angular.module('myApp.UpdatePerson', ['ngRoute'])
                                                                                 if ($scope.name != null && $scope.name != '') {
                                                                                     $scope.personT.name = $scope.name;
                                                                                 }
-                                                                                $scope.selectmenu=document.getElementById("sexoS");
-                                                                                 $scope.selectmenu.onchange = function () {
-                                                                                    $scope.personT.sexo = this.options[this.selectedIndex].text;
-                                                                                }
+
                                                                                 if ($scope.lugarDeNacimiento != null && $scope.lugarDeNacimiento != '') {
                                                                                     $scope.personT.lugarDeNacimiento = $scope.lugarDeNacimiento;
                                                                                 }
